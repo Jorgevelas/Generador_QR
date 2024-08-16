@@ -1,0 +1,140 @@
+/* Importa la fuente Google Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+*{
+  /* Reinicia márgenes y paddings, y establece el modelo de caja */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  /* Alinea el contenido centrado tanto vertical como horizontalmente */
+  display: flex;
+  padding: 0 10px;
+  min-height: 100vh;
+  align-items: center;
+  background: #696969;
+  justify-content: center;
+}
+
+::selection{
+  /* Establece el color de fondo y texto para la selección de texto */
+  color: #fff;
+  background: #696969;
+}
+
+.wrapper{
+  /* Define dimensiones y estilos de la caja principal */
+  height: 265px;
+  max-width: 410px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 20px 25px 0;
+  transition: height 0.2s ease;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.wrapper.active{
+  /* Cambia la altura cuando se genera un código QR */
+  height: 530px;
+}
+
+header h1{
+  /* Estilo para el título principal */
+  font-size: 21px;
+  font-weight: 500;
+}
+
+header p{
+  /* Estilo para el texto descriptivo */
+  margin-top: 5px;
+  color: #575757;
+  font-size: 16px;
+}
+
+.wrapper .form{
+  /* Define el margen para el formulario */
+  margin: 20px 0 25px;
+}
+
+.form :where(input, button){
+  /* Estilo común para el input y el botón */
+  width: 100%;
+  height: 55px;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  transition: 0.1s ease;
+}
+
+.form input{
+  /* Estilo específico para el campo de texto */
+  font-size: 18px;
+  padding: 0 17px;
+  border: 1px solid #999;
+}
+
+.form input:focus{
+  /* Sombra al hacer focus en el campo de texto */
+  box-shadow: 0 3px 6px rgba(0,0,0,0.13);
+}
+
+.form input::placeholder{
+  /* Estilo para el texto placeholder */
+  color: #999;
+}
+
+.form button{
+  /* Estilo para el botón */
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  background: #575757;
+}
+
+.qr-code{
+  /* Estilo para la sección donde se mostrará el código QR */
+  opacity: 0;
+  display: flex;
+  padding: 33px 0;
+  border-radius: 5px;
+  align-items: center;
+  pointer-events: none;
+  justify-content: center;
+  border: 1px solid #ccc;
+}
+
+.wrapper.active .qr-code{
+  /* Estilo para mostrar el código QR una vez generado */
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.5s 0.05s ease;
+}
+
+.qr-code img{
+  /* Estilo para la imagen del código QR */
+  width: 170px;
+}
+
+@media (max-width: 430px){
+  /* Estilos responsivos para dispositivos con pantallas más pequeñas */
+  .wrapper{
+    height: 255px;
+    padding: 16px 20px;
+  }
+  .wrapper.active{
+    height: 510px;
+  }
+  header p{
+    color: #696969;
+  }
+  .form :where(input, button){
+    height: 52px;
+  }
+  .qr-code img{
+    width: 160px;
+  }  
+}
