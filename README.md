@@ -20,7 +20,7 @@ meta nombre="viewport" content="ancho=ancho del dispositivo, escala inicial=1.0"
 título de la página web
 enlaces a la hoja de estilo y fuentes externas
 Incluye un contenedor para agrupar y esta compuesto por
- wrap Principal: Utiliza una <div> con la clase wrap que alberga los encabezados de la interfaz.
+ wrap Principal: Utiliza un <div> con la clase wrap que alberga los encabezados de la interfaz.
 form: cuenta con un imput que permite ingresar el texto o url deseada
 button: un boton que permite la generacion del codigo QR
 
