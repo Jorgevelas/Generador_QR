@@ -1,8 +1,8 @@
-/* Importa la fuente Google Poppins */
+
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
 
 *{
-  /* Reinicia márgenes y paddings, y establece el modelo de caja */
+  
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -10,7 +10,6 @@
 }
 
 body{
-  /* Alinea el contenido centrado tanto vertical como horizontalmente */
   display: flex;
   padding: 0 10px;
   min-height: 100vh;
@@ -20,13 +19,11 @@ body{
 }
 
 ::selection{
-  /* Establece el color de fondo y texto para la selección de texto */
   color: #fff;
   background: #696969;
 }
 
 .wrapper{
-  /* Define dimensiones y estilos de la caja principal */
   height: 265px;
   max-width: 410px;
   background: #fff;
@@ -37,30 +34,25 @@ body{
 }
 
 .wrapper.active{
-  /* Cambia la altura cuando se genera un código QR */
   height: 530px;
 }
 
 header h1{
-  /* Estilo para el título principal */
   font-size: 21px;
   font-weight: 500;
 }
 
 header p{
-  /* Estilo para el texto descriptivo */
   margin-top: 5px;
   color: #575757;
   font-size: 16px;
 }
 
 .wrapper .form{
-  /* Define el margen para el formulario */
   margin: 20px 0 25px;
 }
 
 .form :where(input, button){
-  /* Estilo común para el input y el botón */
   width: 100%;
   height: 55px;
   border: none;
@@ -70,7 +62,6 @@ header p{
 }
 
 .form input{
-  /* Estilo específico para el campo de texto */
   font-size: 18px;
   padding: 0 17px;
   border: 1px solid #999;
@@ -82,12 +73,10 @@ header p{
 }
 
 .form input::placeholder{
-  /* Estilo para el texto placeholder */
   color: #999;
 }
 
 .form button{
-  /* Estilo para el botón */
   color: #fff;
   cursor: pointer;
   margin-top: 20px;
@@ -96,7 +85,6 @@ header p{
 }
 
 .qr-code{
-  /* Estilo para la sección donde se mostrará el código QR */
   opacity: 0;
   display: flex;
   padding: 33px 0;
@@ -108,19 +96,17 @@ header p{
 }
 
 .wrapper.active .qr-code{
-  /* Estilo para mostrar el código QR una vez generado */
   opacity: 1;
   pointer-events: auto;
   transition: opacity 0.5s 0.05s ease;
 }
 
 .qr-code img{
-  /* Estilo para la imagen del código QR */
   width: 170px;
 }
 
 @media (max-width: 430px){
-  /* Estilos responsivos para dispositivos con pantallas más pequeñas */
+
   .wrapper{
     height: 255px;
     padding: 16px 20px;
@@ -138,3 +124,4 @@ header p{
     width: 160px;
   }  
 }
+
